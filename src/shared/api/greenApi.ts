@@ -15,6 +15,7 @@ export function createGreenApiClient({
 	const apiUrl =
 		import.meta.env.VITE_GREEN_API_URL ?? 'https://4100.api.green-api.com'
 	const baseUrl = `${apiUrl.replace(/\/$/, '')}/waInstance${encodeURIComponent(idInstance)}`
+
 	const token = encodeURIComponent(apiTokenInstance)
 	const request = async <T>(
 		method: string,
